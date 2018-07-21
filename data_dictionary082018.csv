@@ -1,0 +1,58 @@
+﻿Column In Labeled Data,Available in un-labeled data?,Source,Notes
+zip,yes,openpv,a zipcode is an instance in our data; it is also one of three keys we use for integration with other tables
+install_type,no,openpv,"rolled the 17 or so values in this into three: residential, commercial, industrial (to line up with rate tables)"
+Year Installed,no,openpv,"the first year of install allowed in this data is 2016, but we have data that goes much farther back"
+size_kw,no,openpv,
+cost_per_watt,no,openpv,this is the target variable
+cost,no,openpv,
+lbnl_tts_version_year,no,openpv,
+annual_PV_prod,no,openpv,"I have a feeling these will be highly determinative of cost, but they're not available in non-labeled data"
+annual_insolation,no,openpv,
+sales_tax_cost,no,openpv,
+tilt1,no,openpv,
+azimuth1,no,openpv,
+reported_annual_energy_prod,no,openpv,
+index,no,openpv,
+PO_NAME,yes,Census,These columns are used to cross-walk zipcodes to other geographic areas to integrate other datasets
+STATE,yes,Census,These columns are used to cross-walk zipcodes to other geographic areas to integrate other datasets
+ZIP_TYPE,yes,Census,These columns are used to cross-walk zipcodes to other geographic areas to integrate other datasets
+ZCTA,yes,Census,"This is how the census bureau accounts for shifts in small zip codes, merging them into larger ones (reduces total count from ~40k to ~33k)"
+Zip_join_type,yes,Census,How the zipcode-ZCTA crosswalk was done; this distinction will be meaningful for some variables
+population,yes,Census,
+landsqmi,yes,Census,
+popdensity,yes,Census,
+eiaid,yes,OpenEI Utility Rates,
+utility_name,yes,OpenEI Utility Rates,
+service_type,yes,OpenEI Utility Rates,
+ownership,yes,OpenEI Utility Rates,
+comm_rate,yes,OpenEI Utility Rates,
+ind_rate,yes,OpenEI Utility Rates,
+res_rate,yes,OpenEI Utility Rates,
+eiaid_iou,yes,OpenEI Utility Rates,
+utility_name_iou,yes,OpenEI Utility Rates,
+state_iou,yes,OpenEI Utility Rates,
+service_type_iou,yes,OpenEI Utility Rates,
+ownership_iou,yes,OpenEI Utility Rates,
+comm_rate_iou,yes,OpenEI Utility Rates,
+ind_rate_iou,yes,OpenEI Utility Rates,
+res_rate_iou,yes,OpenEI Utility Rates,
+no_financial_incentive_prog,yes,DSIRE,number of financial incentive programs for renewable energy per state
+no_rules_reg_pol_incentive,yes,DSIRE,number of rules/regs incentive programs for renewable energy per state
+ZCTA_5,yes,Housing Survey,
+Geography,yes,Economic Survey,
+mean_income,yes,Economic Survey,
+earning_hhs,yes,Economic Survey,
+mean_income_earning_hhs,yes,Economic Survey,
+percent_int_div_rent,yes,Economic Survey,"I have a theory that the more people who have capital gains income in a zipcode, the greater the adoption"
+earn_int_div_rent,yes,Economic Survey,"I have a theory that the more people who have capital gains income in a zipcode, the greater the adoption"
+Geographic identifier code,yes,American Community Survey,
+Number of establishments,yes,American Community Survey,We could use this to measure adoption for commercial solar
+Paid employees for pay period including March 12 (number),yes,American Community Survey,
+"First-quarter payroll ($1,000)",yes,Housing Survey,
+"Annual payroll ($1,000)",yes,Housing Survey,
+total_household,yes,Housing Survey,We could divide this by the number of installs per zip to measure adoption for residential solar
+avg_hh_size,yes,Housing Survey,
+percet_1unit,yes,Housing Survey,
+no_plants,yes,EIA,number of PV generators in a zipcode
+total_capacity,yes,EIA,generating capacity of all PV generators in that zipcode
+op_months,yes,EIA,age in months of operating PV generators in a zipcode
